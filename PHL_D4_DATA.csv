@@ -1,0 +1,177 @@
+Skater_ID,Skaters,Position,Games Played,Goals,Assists,Goals Allowed,Win,Loss,Week,Team
+1,Snooze,S,4,8,3,0,4,0,4,Nebraska City Cornstalks
+2,Andomal,S,4,2,8,0,4,0,4,Nebraska City Cornstalks
+3,AngryBullFrog,S,4,1,6,0,4,0,4,Nebraska City Cornstalks
+4,Bigthrobber,S,4,2,7,0,4,0,4,Nebraska City Cornstalks
+5,CosmicDonut,G,4,0,2,1,4,0,4,Nebraska City Cornstalks
+6,MadanSmash,S,4,8,3,0,3,1,4,Mexico City Raiders
+7,PimpDaddyD,S,4,0,4,0,3,1,4,Mexico City Raiders
+8,Kease,S,4,3,6,0,3,1,4,Mexico City Raiders
+9,OGOwen,S,4,2,5,0,3,1,4,Mexico City Raiders
+10,Koochie,G,4,0,4,7,3,1,4,Mexico City Raiders
+11,Gizmatron,S,4,0,1,0,1,3,4,Oklahoma City Bandits
+12,ColinMacB,S,4,0,0,0,1,3,4,Oklahoma City Bandits
+13,Sushi,S,4,2,0,0,1,3,4,Oklahoma City Bandits
+14,Loosegoose,S,4,0,2,0,1,3,4,Oklahoma City Bandits
+15,Conor,G,4,0,0,10,1,3,4,Oklahoma City Bandits
+16,Bransk,S,4,1,1,0,0,4,4,Kansas City Fountains
+17,Hammer,S,4,0,3,0,0,4,4,Kansas City Fountains
+18,Agent P,S,4,3,0,0,0,4,4,Kansas City Fountains
+19,Nate Mac,S,4,0,4,0,0,4,4,Kansas City Fountains
+20,Dumb,G,4,0,0,14,0,4,4,Kansas City Fountains
+4,Bigthrobber,S,4,2,1,0,1,3,5,Nebraska City Cornstalks
+21,Big Dock,S,4,1,4,0,1,3,5,Nebraska City Cornstalks
+22,Gary,S,4,3,1,0,1,3,5,Nebraska City Cornstalks
+23,Feng,S,4,0,6,0,1,3,5,Nebraska City Cornstalks
+10,Koochie,G,4,0,0,6,1,3,5,Nebraska City Cornstalks
+18,Agent P,S,4,4,3,0,2,2,5,Mexico City Raiders
+19,Nate Mac,S,4,0,3,0,2,2,5,Mexico City Raiders
+24,Gumby,S,3,0,3,0,1,2,5,Mexico City Raiders
+2,Andomal,S,4,1,2,0,2,2,5,Mexico City Raiders
+25,SilvySpark,G,4,0,1,4,2,2,5,Mexico City Raiders
+1,Snooze,S,4,4,2,0,3,1,5,Oklahoma City Bandits
+26,FlyinCharles,S,4,0,2,0,3,1,5,Oklahoma City Bandits
+9,OGOwen,S,4,1,4,0,3,1,5,Oklahoma City Bandits
+27,Richard P,S,4,2,3,0,3,1,5,Oklahoma City Bandits
+5,CosmicDonut,G,4,0,1,7,3,1,5,Oklahoma City Bandits
+7,PimpDaddyD,S,4,0,0,0,2,2,5,Kansas City Fountains
+28,Jordan,S,4,1,2,0,2,2,5,Kansas City Fountains
+29,P1kem1n,S,4,0,1,0,2,2,5,Kansas City Fountains
+30,Chabot,S,4,2,1,0,2,2,5,Kansas City Fountains
+31,CosmeticKat,G,4,0,2,5,2,2,5,Kansas City Fountains
+32,Blake Crxzy,S,1,0,2,0,1,0,5,Substitute
+6,MadanSmash,S,4,2,0,0,0,4,6,Nebraska City Cornstalks
+33,ToxicController,S,4,0,3,0,0,4,6,Nebraska City Cornstalks
+34,jbs5869,S,4,1,1,0,0,4,6,Nebraska City Cornstalks
+35,Boeser,S,4,0,2,0,0,4,6,Nebraska City Cornstalks
+5,CosmicDonut,G,2,0,0,6,0,2,6,Nebraska City Cornstalks
+36,Nedyah,S,4,4,4,0,3,1,6,Mexico City Raiders
+37,StephenRodgers,S,4,4,4,0,3,1,6,Mexico City Raiders
+38,Ocolotest,S,3,0,3,0,3,1,6,Mexico City Raiders
+4,Bigthrobber,S,4,2,6,0,3,1,6,Mexico City Raiders
+31,CosmeticKat,G,4,0,0,6,3,1,6,Mexico City Raiders
+29,P1kem1n,S,3,1,4,0,3,0,6,Oklahoma City Bandits
+1,Snooze,S,4,5,3,0,4,0,6,Oklahoma City Bandits
+39,Shaivonte,S,4,2,2,0,4,0,6,Oklahoma City Bandits
+40,NoahBody,S,3,2,3,0,3,0,6,Oklahoma City Bandits
+41,Dyson,G,4,0,3,3,4,0,6,Oklahoma City Bandits
+11,Gizmatron,S,4,1,2,0,1,3,6,Kansas City Fountains
+13,Sushi,S,4,2,0,0,1,3,6,Kansas City Fountains
+18,Agent P,S,4,0,3,0,1,3,6,Kansas City Fountains
+42,jyfrl,S,4,1,2,0,1,3,6,Kansas City Fountains
+25,SilvySpark,G,4,0,0,8,1,3,6,Kansas City Fountains
+24,Gumby,S,2,1,3,0,2,0,6,Substitute
+43,Montpelier,S,1,1,1,0,1,0,6,Substitute
+44,WildGoatSoup,G,2,0,0,7,0,2,6,Substitute
+45,5Glass,S,1,1,0,0,0,1,7,Nebraska City Cornstalks
+4,Bigthrobber,S,4,2,4,0,2,2,7,Nebraska City Cornstalks
+34,jbs5869,S,4,1,3,0,2,2,7,Nebraska City Cornstalks
+46,RadioHeadLover,S,4,2,2,0,2,2,7,Nebraska City Cornstalks
+47,Lueyloo11,G,4,0,2,9,2,2,7,Nebraska City Cornstalks
+48,Amselik,S,4,1,3,0,2,2,7,Mexico City Raiders
+49,Coumz,S,4,0,4,0,2,2,7,Mexico City Raiders
+50,Laverne,S,4,5,1,0,2,2,7,Mexico City Raiders
+13,Sushi,S,4,1,3,0,2,2,7,Mexico City Raiders
+51,Silky,G,4,0,1,9,2,2,7,Mexico City Raiders
+1,Snooze,S,4,7,0,0,2,2,7,Oklahoma City Bandits
+2,Andomal,S,4,0,7,0,2,2,7,Oklahoma City Bandits
+11,Gizmatron,S,4,1,3,0,2,2,7,Oklahoma City Bandits
+52,Mono,S,4,0,6,0,2,2,7,Oklahoma City Bandits
+44,WildGoatSoup,G,4,0,0,8,2,2,7,Oklahoma City Bandits
+18,Agent P,S,4,1,5,0,2,2,7,Kansas City Fountains
+32,Blake Crxzy,S,4,4,3,0,2,2,7,Kansas City Fountains
+37,StephenRodgers,S,4,3,3,0,2,2,7,Kansas City Fountains
+8,Kease,S,4,0,3,0,2,2,7,Kansas City Fountains
+53,Atomic247,G,2,0,0,3,1,1,7,Kansas City Fountains
+41,Dyson,S,2,1,0,0,1,1,7,Substitute
+5,CosmicDonut,G,2,0,0,2,1,1,7,Substitute
+43,Montpelier,S,1,1,2,0,1,0,7,Substitute
+29,P1kem1n,S,4,0,1,0,3,1,8,Nebraska City Cornstalks
+32,Blake Crxzy,S,4,1,1,0,3,1,8,Nebraska City Cornstalks
+46,RadioHeadLover,S,4,4,2,0,3,1,8,Nebraska City Cornstalks
+54,Rain,S,1,0,0,0,1,0,8,Nebraska City Cornstalks
+44,WildGoatSoup,G,4,0,2,4,3,1,8,Nebraska City Cornstalks
+55,Otter,S,4,0,1,0,0,4,8,Mexico City Raiders
+56,Adnomal,S,4,2,1,0,0,4,8,Mexico City Raiders
+4,Bigthrobber,S,4,0,3,0,0,4,8,Mexico City Raiders
+27,Richard P,S,4,2,1,0,0,4,8,Mexico City Raiders
+5,CosmicDonut,G,4,0,2,9,0,4,8,Mexico City Raiders
+1,Snooze,S,1,0,0,0,0,1,8,Oklahoma City Bandits
+18,Agent P,S,4,0,2,0,3,1,8,Oklahoma City Bandits
+57,gr8,S,4,3,2,0,3,1,8,Oklahoma City Bandits
+58,Dippydoo,S,4,0,6,0,3,1,8,Oklahoma City Bandits
+25,SilvySpark,G,4,0,0,4,3,1,8,Oklahoma City Bandits
+41,Dyson,S,4,2,5,0,2,2,8,Kansas City Fountains
+59,Lewy,S,4,5,2,0,2,2,8,Kansas City Fountains
+11,Gizmatron,S,4,1,3,0,2,2,8,Kansas City Fountains
+19,Nate Mac,S,4,0,3,0,2,2,8,Kansas City Fountains
+20,Dumb,G,4,0,2,8,2,2,8,Kansas City Fountains
+60,Doug,S,3,1,4,0,2,1,8,Substitute
+36,Nedyah,S,2,3,2,0,2,0,8,Substitute
+61,Alejo,S,1,1,1,0,1,0,8,Substitute
+30,Chabot,S,4,0,6,0,2,2,9,Nebraska City Cornstalks
+2,Andomal,S,4,5,1,0,2,2,9,Nebraska City Cornstalks
+23,Feng,S,4,1,5,0,2,2,9,Nebraska City Cornstalks
+5,CosmicDonut,G,4,0,0,3,2,2,9,Nebraska City Cornstalks
+52,Mono,S,4,0,6,0,2,2,9,Mexico City Raiders
+18,Agent P,S,4,2,4,0,2,2,9,Mexico City Raiders
+29,P1kem1n,S,4,4,2,0,2,2,9,Mexico City Raiders
+47,Lueyloo11,G,4,0,0,6,2,2,9,Mexico City Raiders
+50,Laverne,S,3,1,4,0,2,1,9,Oklahoma City Bandits
+62,Nylander,S,3,2,3,0,1,2,9,Oklahoma City Bandits
+46,RadioHeadLover,S,4,5,3,0,2,2,9,Oklahoma City Bandits
+63,Berube Hansen,G,4,0,1,6,2,2,9,Oklahoma City Bandits
+13,Sushi,S,4,4,3,0,2,2,9,Kansas City Fountains
+27,Richard P,S,4,2,5,0,2,2,9,Kansas City Fountains
+19,Nate Mac,S,4,1,5,0,2,2,9,Kansas City Fountains
+55,Otter,G,4,0,1,6,2,2,9,Kansas City Fountains
+34,jbs5869,S,2,1,2,0,1,1,9,Substitute
+32,Blake Crxzy,S,4,3,3,0,3,1,10,Nebraska City Cornstalks
+64,Postmaster,S,4,0,4,0,3,1,10,Nebraska City Cornstalks
+65,BadBagginz,S,2,0,0,0,1,1,10,Nebraska City Cornstalks
+13,Sushi,S,2,1,2,0,1,1,10,Nebraska City Cornstalks
+53,Atomic247,G,4,0,2,7,3,1,10,Nebraska City Cornstalks
+2,Andomal,S,4,1,0,0,2,2,10,Mexico City Raiders
+66,Prada,S,4,1,1,0,2,2,10,Mexico City Raiders
+67,Will,S,4,0,3,0,2,2,10,Mexico City Raiders
+27,Richard P,S,2,2,0,0,1,1,10,Mexico City Raiders
+10,Koochie,G,4,0,2,5,2,2,10,Mexico City Raiders
+23,Feng,S,4,1,6,0,3,1,10,Oklahoma City Bandits
+68,Price,S,4,6,3,0,3,1,10,Oklahoma City Bandits
+1,Snooze,S,2,2,1,0,2,0,10,Oklahoma City Bandits
+50,Laverne,S,2,2,1,0,2,0,10,Oklahoma City Bandits
+69,Rhubarb,G,4,0,2,4,3,1,10,Oklahoma City Bandits
+4,Bigthrobber,S,4,0,4,0,0,4,10,Kansas City Fountains
+35,Boeser,S,4,0,2,0,0,4,10,Kansas City Fountains
+40,NoahBody,S,4,1,0,0,0,4,10,Kansas City Fountains
+70,Jamal,S,4,3,0,0,0,4,10,Kansas City Fountains
+5,CosmicDonut,G,4,0,1,14,0,4,10,Kansas City Fountains
+46,RadioHeadLover,S,3,3,4,0,3,0,10,Substitute
+71,Gdylan,S,2,1,1,0,2,0,10,Substitute
+24,Gumby,S,2,0,3,0,1,1,10,Substitute
+72,Mickster,S,2,1,3,0,1,1,10,Substitute
+41,Dyson,S,2,2,0,0,1,1,10,Substitute
+24,Gumby,S,4,0,1,0,2,2,11,Nebraska City Cornstalks
+29,P1kem1n,S,4,2,1,0,2,2,11,Nebraska City Cornstalks
+71,Gdylan,S,2,1,1,0,1,1,11,Nebraska City Cornstalks
+66,Prada,S,4,0,2,0,2,2,11,Nebraska City Cornstalks
+73,Bissonnette,G,4,0,0,6,2,2,11,Nebraska City Cornstalks
+52,Mono,S,4,0,1,0,1,3,11,Mexico City Raiders
+17,Hammer,S,4,1,1,0,1,3,11,Mexico City Raiders
+4,Bigthrobber,S,4,1,0,0,1,3,11,Mexico City Raiders
+74,Birbo,S,4,0,1,0,1,3,11,Mexico City Raiders
+5,CosmicDonut,G,4,0,1,7,1,3,11,Mexico City Raiders
+62,Nylander,S,4,0,1,0,1,3,11,Oklahoma City Bandits
+75,Pinky,S,4,2,1,0,1,3,11,Oklahoma City Bandits
+23,Feng,S,4,1,3,0,1,3,11,Oklahoma City Bandits
+76,Shrews,S,4,1,3,0,1,3,11,Oklahoma City Bandits
+77,ThePerfectNut,G,3,0,0,4,0,3,11,Oklahoma City Bandits
+41,Dyson,S,4,1,4,0,4,0,11,Kansas City Fountains
+70,Jamal,S,4,3,2,0,4,0,11,Kansas City Fountains
+78,Topher,S,4,3,10,0,4,0,11,Kansas City Fountains
+46,RadioHeadLover,S,4,7,5,0,4,0,11,Kansas City Fountains
+79,Grip,G,4,0,1,4,4,0,11,Kansas City Fountains
+63,Berube Hansen,G,1,0,0,0,1,0,11,Substitute
+80,Caufield,S,2,0,1,0,1,1,11,Substitute
+41,Dyson,G,1,0,0,0,0,0,11,Substitute
+79,Grip,S,1,0,0,0,0,0,11,Substitute
