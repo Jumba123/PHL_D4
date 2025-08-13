@@ -27,148 +27,73 @@ def Pre_Process_CSV(df):
     
     return df
 
-def Skater_Stats(df):
-        df = df.query(f"Position == 'S' ")
-        df = df.drop(columns=["Skater_ID", "Week", "Team","Goals Allowed"])
-        df = df.groupby("Skaters",as_index=False).sum("Points").sort_values("Points",ascending=False)
-        
-        slider_gp = st.slider("Games Played", 0, df['Games Played'].max().round(0).astype(int),0)
-        
-        df = df[df['Games Played'] >= slider_gp]
-        df['Rank'] = df['Points'].rank(method='dense', ascending=False)
-        df.insert(0, "Rank (Points)", df.pop("Rank"))
-        df = df.set_index('Rank (Points)')
-        st.dataframe(df)
-
-def Goalie_Stats(df):
-        df = df.query(f"Position == 'G' ")
-        df = df.drop(columns=["Skater_ID", "Week", "Team", "Goals", "Assists"])
-        df = df.groupby("Skaters",as_index=False).sum("Goals Allowed").sort_values("Skaters",ascending=True)
-
-        slider_gp = st.slider("Games Played", 0, df['Games Played'].max().round(0).astype(int),0)
-
-        df["GAA"] = df["Goals Allowed"] / df["Games Played"]
-        df["GAA"] = df["GAA"].round(2)
-        df.insert(2, "GAA", df.pop("GAA"))
-
-        df = df[df['Games Played'] >= slider_gp]
-        df = df[['Skaters','Games Played', 'Goals Allowed', 'GAA', 'Win', 'Loss', 'Points']]
-        df['Rank'] = df['GAA'].rank(method='dense', ascending=True)
-        df.insert(0, "Rank (GAA)", df.pop("Rank"))
-        df = df.set_index('Rank (GAA)')
-        df = df.sort_values("Rank (GAA)",ascending=True)
-        st.dataframe(df)
-
-def Skater_Metrics(df,Skater_Select):
-        df_Skater = df.query(f"Skaters == '{Skater_Select}' and Position == 'S' ")
-        df = df.drop(columns=["Skater_ID","Week", "Team", "Goals Allowed"])
-        df = df.query(f"Skaters == '{Skater_Select}' and Position == 'S' ")
-        df = df.groupby("Skaters").sum("Points").sort_values("Points",ascending=False)
-
-        df["PPG"] = df["Points"] / df["Games Played"]
-        df["PPG"] = df["PPG"].round(2)
-        df.insert(4, "PPG", df.pop("PPG"))
-        
-        Gp, Goals, Assists, Points, Ppg, Win, Loss = st.columns(7)
-        Gp.metric("Games Played",df["Games Played"])
-        Goals.metric("Goals",df["Goals"])
-        Assists.metric("Assists",df["Assists"])
-        Points.metric("Points",df["Points"])
-        Ppg.metric("PPG",df["PPG"])
-        Win.metric("Win",df["Win"])
-        Loss.metric("Loss",df["Loss"])
-
-        df_Skater = df_Skater[['Week', 'Skaters', 'Goals','Assists','Points','Team', 'Win', 'Loss']].set_index('Week')
-        st.dataframe(df_Skater)
-
-def Skater_Graph(df,Skater_Select):
-
-    df = df.query(f"Skaters == '{Skater_Select}' and Position == 'S'").copy()
-    df['Total_Points'] = df.groupby('Skaters')['Points'].cumsum()
-    st.line_chart(df, x="Week", y="Total_Points")
-
-    # df['Week'] = df['Week'].astype(int)
-    # df['Week'].fillna(0, inplace=True)
-    # Min_Week = df['Week'].min()
-    # Max_Week = df['Week'].max()
-    # st.dataframe(df['Week'])
-    # chart = alt.Chart(df).mark_line().encode(
-    #     x=alt.X('Week:Q',axis=alt.Axis(title="Week",values=list(range(int(Min_Week), int(Max_Week) + 1))), scale=alt.Scale(domain=[Min_Week, Max_Week])),
-    #     y=alt.Y('Total_Points:Q',axis=alt.Axis(title="Total_Points")),
-    #     tooltip=['Week:Q', 'Total_Points:Q']
-    # ).interactive()
-
-    # st.altair_chart(chart, use_container_width=True)
-
-def Goalie_Metrics(df,Goalie_Select):
-    if Goalie_Select:
-        df_Goalie = df.query(f"Skaters == '{Goalie_Select}' and Position == 'G' ").copy()
-        # Aggregate overall goalie stats
-        df_summary = df_Goalie.groupby("Skaters", as_index=False).sum(numeric_only=True)
-        df_summary["GAA"] = (df_summary["Goals Allowed"] / df_summary["Games Played"]).round(2)
-        df_summary.insert(2, "GAA", df_summary.pop("GAA"))
-
-        # Metrics
-        Gp, Goals_Allowed, Gaa, Win, Loss, Points = st.columns(6)
-        Gp.metric("Games Played", df_summary["Games Played"].iloc[0])
-        Goals_Allowed.metric("Goals Allowed", df_summary["Goals Allowed"].iloc[0])
-        Gaa.metric("GAA", df_summary["GAA"].iloc[0])
-        Win.metric("Win", df_summary["Win"].iloc[0])
-        Loss.metric("Loss", df_summary["Loss"].iloc[0])
-        Points.metric("Points", df_summary["Points"].iloc[0])
-
-        # Per-week stats
-        df_Goalie["GAA"] = (df_Goalie["Goals Allowed"] / df_Goalie["Games Played"]).round(2)
-        df_Goalie.insert(2, "GAA", df_Goalie.pop("GAA"))
-        df_Goalie = df_Goalie[['Week','Team','Skaters','Games Played','Goals Allowed','GAA','Win','Loss','Points']].set_index('Week')
-
-        st.dataframe(df_Goalie)
-
 def Home_Page (df):
-    Options = ["All","Skaters","Goalie"]
-    Filter = st.segmented_control("Filter", Options ,key="Nate_Mac1",default=Options[0])
+    df["PPG"] = df["Points"] / df["Games Played"]
+    df["PPG"] = df["PPG"].round(2)
+    df.insert(7, "PPG", df.pop("PPG"))
+    df = df.drop(columns=["Skater_ID", "Week", "Team","Goals Allowed"])
 
-    if Filter == Options[0]:
-        df0 = df.copy()
-        df0 = df0.drop(columns=["Skater_ID", "Week", "Team","Goals Allowed"])
-        df0 = df0.groupby("Skaters",as_index=False).sum("Points").sort_values("Points",ascending=False)
+    Options = ["Points","PPG","Goals", "Assists"]
+    Rank_Choice = st.pills("Rank By:", Options, default=Options[0], selection_mode="single")
+
+    for option in Options:
+        if Rank_Choice == option:
+            df_temp = df.copy()
+
+            # Group and sort by the selected stat
+            df_temp = df_temp.groupby("Skaters", as_index=False).sum(option).sort_values(option, ascending=False)
+
+            # Games played filter
+            slider_gp = st.slider("Games Played", 0, df_temp['Games Played'].max().round(0).astype(int), 0)
+            df_temp = df_temp[df_temp['Games Played'] >= slider_gp]
+
+            # Rank and display
+            df_temp['Rank'] = df_temp[option].rank(method='dense', ascending=False)
+            df_temp.insert(0, f"Rank ({option})", df_temp.pop("Rank"))
+            df_temp = df_temp.set_index(f"Rank ({option})")
+            st.dataframe(df_temp)
+            break  # Stop after the matching option is processed
+
+
+    # if Rank_Choice == Options[0]:
+    #     df0 = df.copy()
+    #     df0 = df0.groupby("Skaters",as_index=False).sum(Options[0]).sort_values(Options[0],ascending=False)
         
-        st.text("All Time Skater Stats")
-        slider_gp = st.slider("Games Played", 0, df0['Games Played'].max().round(0).astype(int),0)
+    #     slider_gp = st.slider("Games Played", 0, df0['Games Played'].max().round(0).astype(int),0)
+    #     df0 = df0[df0['Games Played'] >= slider_gp]
+
+    #     df0['Rank'] = df0[Options[0]].rank(method='dense', ascending=False)
+    #     df0.insert(0, f"Rank ({Options[0]})", df0.pop("Rank"))
+    #     df0 = df0.set_index(f'Rank ({Options[0]})')
+    #     st.dataframe(df0)
+    # elif Rank_Choice == Options[1]:
+    #     df1 = df.copy()
+    #     df1 = df1.groupby("Skaters",as_index=False).sum(Options[1]).sort_values(Options[0],ascending=False)
         
-        df0 = df0[df0['Games Played'] >= slider_gp]
-        df0['Rank'] = df0['Points'].rank(method='dense', ascending=False)
-        df0.insert(0, "Rank (Points)", df0.pop("Rank"))
-        df0 = df0.set_index('Rank (Points)')
-        st.dataframe(df0)
+    #     slider_gp = st.slider("Games Played", 0, df1['Games Played'].max().round(0).astype(int),0)
+        
+    #     df1 = df1[df1['Games Played'] >= slider_gp]
+    #     df1['Rank'] = df1[Options[1]].rank(method='dense', ascending=False)
+    #     df1.insert(0, f"Rank ({Options[1]})", df1.pop("Rank"))
+    #     df1 = df1.set_index(f'Rank ({Options[1]})')
+    #     st.dataframe(df1)
 
-    elif Filter == Options[1]:
-        df1 = df.copy()
-        Filtered_Skaters = df1.query(f"Position == 'S' ")
-        Skater_List = Filtered_Skaters["Skaters"].str.strip().drop_duplicates().sort_values(ascending=True)
-        Skater_Select = st.selectbox("Choose Skater", Skater_List,index=None,placeholder="Please Select Skater")
-
-        if Skater_Select:
-            st.markdown(f"<h1 style='text-align: center;'>{Skater_Select}</h1>", unsafe_allow_html=True)
-            Skater_Metrics(df,Skater_Select)
-            # Skater_Graph(df,Skater_Select)
-        else:
-            st.text("All Time Skater Stats")
-            Skater_Stats(df)
-
-    elif Filter == Options[2]:
-        df2 = df.copy()
-        Filtered_Goalie = df2.query(f"Position == 'G' ")
-        Goalie_List = Filtered_Goalie["Skaters"].str.strip().drop_duplicates().sort_values(ascending=True)
-        Goalie_Select = st.selectbox("Choose Goalie", Goalie_List,index=None,placeholder="Please Select Goalie")
-
-        if Goalie_Select:
-            st.markdown(f"<h1 style='text-align: center;'>{Goalie_Select}</h1>", unsafe_allow_html=True)
-            Goalie_Metrics(df,Goalie_Select)
-        else:
-            st.text("Goalie Stats Sorted By GAA")
-            Goalie_Stats(df)
 
 df = Pre_Process_CSV(df)
-st.title("PHL D4 Player Data (Week 1 - 3 Not Included)")
+st.markdown(f"<h1 style='text-align: center;'>PHL D4 Data (Week 1-3 Not Included)</h1>", unsafe_allow_html=True)
+
+Skater_Link, Goalie_Link, Weekly_Link= st.columns(3,border=True)
+with Skater_Link:
+    Skater_Link = st.button("Skater")
+with Goalie_Link:
+    Goalie_Link = st.button("Goalie")
+with Weekly_Link:
+    Weekly_Link = st.button("Weekly")
+if Skater_Link:
+    st.switch_page("pages/1_skater_stats.py")
+if Goalie_Link:
+    st.switch_page("pages/2_goalie_stats.py")
+if Weekly_Link:
+    st.switch_page("pages/3_weekly_stats.py")
+
 Home_Page(df)
