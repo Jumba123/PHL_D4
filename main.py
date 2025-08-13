@@ -97,3 +97,4 @@ if Weekly_Link:
     st.switch_page("pages/3_weekly_stats.py")
 
 Home_Page(df)
+
