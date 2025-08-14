@@ -28,21 +28,21 @@ def Pre_Process_CSV(df):
     return df
 
 def Goalie_Stats(df):
-    df["GAA"] = df["Goals Allowed"] / df["Games Played"]
-    df["GAA"] = df["GAA"].round(2)
-    df.insert(2, "GAA", df.pop("GAA"))
-    df = df.drop(columns=["Skater_ID", "Week", "Team", "Goals", "Assists"])
     df = df.query(f"Position == 'G' ")
-        
+
     Options = ["GAA","Goals Allowed"]
     Rank_Choice = st.pills("Rank By:", Options, default=Options[0], selection_mode="single")
 
     for option in Options:
         if Rank_Choice == option:
             df_temp = df.copy()
-
             # Group and sort by the selected stat
-            df_temp = df_temp.groupby("Skaters",as_index=False).sum("Goals Allowed").sort_values("Skaters",ascending=True)
+            df_temp = df_temp.groupby("Skaters",as_index=False).sum("Goals Allowed")
+            df_temp["GAA"] = df_temp["Goals Allowed"] / df_temp["Games Played"]
+            df_temp["GAA"] = df_temp["GAA"].round(2)
+            df_temp.insert(2, "GAA", df_temp.pop("GAA"))
+            df_temp = df_temp.drop(columns=["Skater_ID", "Week", "Goals", "Assists"])
+            df_temp = df_temp.sort_values("GAA",ascending=True)
 
             # Games played filter
             slider_gp = st.slider("Games Played", 0, df_temp['Games Played'].max().round(0).astype(int), 0)
